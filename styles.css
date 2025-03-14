@@ -205,7 +205,7 @@ nav a {
     scroll-behavior: smooth;
     padding-bottom: 10px;
 }
-.products-container h2 {
+.products-container > h2 {
     text-align: center;
 }
 .products-container::-webkit-scrollbar {
@@ -244,6 +244,10 @@ nav a {
     width: 200px;
     height: 250px;
     object-fit: contain;
+}
+.product > img:hover{
+    transform: scale(1.13);
+    transition: 0.3s ease-in-out;
 }
 .product > button {
     position: absolute;

@@ -6,6 +6,7 @@
     <title>EverythingHolo</title>
     <link rel="stylesheet" href="css/animeStyles.css">
     <script src="script.js"></script>
+    <script src="js/animeScript.js"></script>
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
         <h1>EverythingHolo</h1>
         <button class="nav-toggle" onclick="toggleMenu()">☰</button>
         <nav id="nav-menu">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <div class="nav-dropdown">
                 <a href="#">Products</a>
                 <div class="dropdown-content">
@@ -54,9 +55,33 @@
                 <img src="#" alt="show">
                 <h3>Title</h3>
             </div>
+            <div class="show hidden">
+                <img src="img/new-show-1.jpg" alt="show">
+                <h3>New Anime 1</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-2.jpg" alt="show">
+                <h3>New Anime 2</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-3.jpg" alt="show">
+                <h3>New Anime 3</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-4.jpg" alt="show">
+                <h3>New Anime 4</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-5.jpg" alt="show">
+                <h3>New Anime 5</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-6.jpg" alt="show">
+                <h3>New Anime 6</h3>
+            </div>
         </div>
         <div class="more">
-            <button>More</button>
+            <button onclick="loadMoreShows('new-shows')">More</button>
         </div>
     </section>
 
@@ -75,9 +100,21 @@
                 <img src="#" alt="show">
                 <h3>Title</h3>
             </div>
+            <div class="show hidden">
+                <img src="img/new-show-1.jpg" alt="show">
+                <h3>New Anime 1</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-2.jpg" alt="show">
+                <h3>New Anime 2</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-3.jpg" alt="show">
+                <h3>New Anime 3</h3>
+            </div>
         </div>
         <div class="more">
-            <button>More</button>
+            <button onclick="loadMoreShows('latest-releases')">More</button>
         </div>
     </section>
 
@@ -96,9 +133,21 @@
                 <img src="#" alt="show">
                 <h3>Title</h3>
             </div>
+            <div class="show hidden">
+                <img src="img/new-show-1.jpg" alt="show">
+                <h3>New Anime 1</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-2.jpg" alt="show">
+                <h3>New Anime 2</h3>
+            </div>
+            <div class="show hidden">
+                <img src="img/new-show-3.jpg" alt="show">
+                <h3>New Anime 3</h3>
+            </div>
         </div>
         <div class="more">
-            <button>More</button>
+            <button onclick="loadMoreShows('popular-shows')">More</button>
         </div>
     </section>
 
@@ -115,7 +164,6 @@
             <button onclick="applyGenreFilter()">Apply Filter</button>
         </div>
         <div class="anime-container" id="filtered-anime">
-            <!-- Filtered anime results will be shown here -->
         </div>
     </section>
 

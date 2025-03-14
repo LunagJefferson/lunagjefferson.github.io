@@ -148,7 +148,7 @@ nav a {
     border-radius: 5px;
 }
 .show > img:hover {
-    transform: scale(1.5); /* Slight zoom effect */
+    transform: scale(1.5);
     transition: 0.5s ease-in-out;
 }
 .show > h3{
@@ -159,6 +159,10 @@ nav a {
 .more{
     place-self: center;
     padding: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Footer */
