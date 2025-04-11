@@ -1,0 +1,348 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding-top: 80px;
+}
+
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    top: 0;
+    left: 0;
+    align-items: center;
+    width:100%;
+    padding: 20px; 
+    background: #333; 
+    color: white; 
+    position: fixed;
+    z-index: 1000;
+}
+
+header > h1 {
+    font-size: larger;
+}
+
+header > img {
+    height: 90px;
+}
+
+header > a {
+    color: white; 
+    text-decoration: none;
+}
+
+.cart-icon > img {
+    height: 35px;
+    margin-right: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 15px; 
+}
+.nav-toggle {
+    display: none;
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Log In Section */
+.login-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #444;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.login-toggle img {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.login-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Banner Section */
+.banner { 
+    text-align: center; 
+    padding: 50px; 
+    background: url('img/summer-sale-banner.jpg') no-repeat center center/cover; 
+    color: rgb(0, 0, 0); 
+}
+.banner> h1 { 
+    font-size: 3em; 
+}
+.cta-button { 
+    display: inline-block; 
+    padding: 10px 20px; 
+    background: red; 
+    color: white; 
+    text-decoration: none; 
+    margin-top: 20px; 
+}
+
+/* News Section */
+.announcement {
+    position: sticky;
+    top: 150px;
+    background: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 80%;
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.announcement-slider {
+    display: flex;
+    width: 400%;
+    animation: slideAnnouncements 15s infinite;
+}
+
+.announcement-item {
+    flex: 0 0 100%;
+    padding: 10px;
+}
+
+/* Slide Animation */
+@keyframes slideAnnouncements {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Products Section */
+.products { 
+    display: flex; 
+    flex-direction: column;
+    overflow-x: auto;
+    justify-content: center; 
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.products > h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.products > form{
+    max-width: 100px;
+    margin-top: 3%;
+    padding: auto;
+    align-self: center;
+}
+.products-container {
+    display: flex;
+    height: 500px;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+.products-container h2 {
+    text-align: center;
+}
+.products-container::-webkit-scrollbar {
+    height: 8px;
+}
+.products-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.products-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.products-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.product { 
+    flex: 0 0 auto;
+    justify-content: space-between;
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.product > h2{
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.product > img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+}
+.product > button {
+    position: absolute;
+    width: 80%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: auto;
+}
+.product > button:hover{
+    background-color: red;
+}
+.product > form > button{
+    position: absolute;
+    width: 80%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: auto;
+}
+.product > form > button:hover{
+    background-color: red;
+}
+.more > a > img{
+    height: 100px;
+    padding-top: 170px;
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer { 
+    background: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    margin-top: 20px; 
+}
+.footer > p > img{
+    height: 20px;
+}
+.footer > p > a{
+    color: lightblue;
+    text-decoration: none;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) { 
+    .products { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #444;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+    .login-btn {
+        display: none;
+    }
+    .login-toggle {
+        display: block;
+    }
+    h1 {
+        display: none;
+    }
+}
+
+nav.active {
+    display: flex;
+}
+
+.login-menu.active {
+    display: block;
+}
